@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Libraries and Config &#8212; My sample book</title>
+    <title>Exploratory Data Analysis &#8212; My sample book</title>
   
   
   
@@ -181,8 +181,7 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Description.html">Project Justification</a></li>
 
-<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Libraries and Config</strong></a></li>
-
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Exploratory Data Analysis</strong></a></li>
 </ul>
 
     </div>
@@ -368,7 +367,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Libraries and Config</h1>
+    <h1>Exploratory Data Analysis</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -378,17 +377,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Libraries and Config</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exploratory-data-analysis"><strong>Exploratory Data Analysis</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#libraries-and-config"><strong>Libraries and Config</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adjusting-datetime-columns-to-correct-format"><strong>Adjusting datetime columns to correct format</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-cleaning"><strong>Data cleaning</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#train-delay-visualization-and-analysis"><strong>Train Delay Visualization and Analysis</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-aggregation-for-temporal-analysis"><strong>Data aggregation for temporal analysis</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#temporal-analysis-of-delays"><strong>Temporal Analysis of delays</strong></a></li>
 </ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -399,8 +394,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="libraries-and-config">
-<h1><strong>Libraries and Config</strong><a class="headerlink" href="#libraries-and-config" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="exploratory-data-analysis">
+<h1><strong>Exploratory Data Analysis</strong><a class="headerlink" href="#exploratory-data-analysis" title="Link to this heading">#</a></h1>
+<section id="libraries-and-config">
+<h2><strong>Libraries and Config</strong><a class="headerlink" href="#libraries-and-config" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -450,9 +447,6 @@ document.write(`
 </div>
 </div>
 </div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="exploratory-data-analysis">
-<h1><strong>Exploratory Data Analysis</strong><a class="headerlink" href="#exploratory-data-analysis" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -491,6 +485,7 @@ memory usage: 314.5+ MB
 </div>
 </div>
 </div>
+</section>
 <section id="adjusting-datetime-columns-to-correct-format">
 <h2><strong>Adjusting datetime columns to correct format</strong><a class="headerlink" href="#adjusting-datetime-columns-to-correct-format" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
@@ -3122,17 +3117,13 @@ Overall, the delays remain under 5 minutes for the majority of the days, althoug
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Libraries and Config</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exploratory-data-analysis"><strong>Exploratory Data Analysis</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#libraries-and-config"><strong>Libraries and Config</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adjusting-datetime-columns-to-correct-format"><strong>Adjusting datetime columns to correct format</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-cleaning"><strong>Data cleaning</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#train-delay-visualization-and-analysis"><strong>Train Delay Visualization and Analysis</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-aggregation-for-temporal-analysis"><strong>Data aggregation for temporal analysis</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#temporal-analysis-of-delays"><strong>Temporal Analysis of delays</strong></a></li>
 </ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>
