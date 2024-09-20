@@ -1,7 +1,7 @@
 # Data Mining Projects 
 # Deutsche Bahn
 
-## Integrant:
+## Integrants:
 
 ### Kenny Zhu
 ![Kenny Zhu](IMG_0101.jpeg)
