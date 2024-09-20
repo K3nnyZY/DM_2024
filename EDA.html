@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>&lt;no title&gt; &#8212; My sample book</title>
+    <title>Libraries and Config &#8212; My sample book</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -175,12 +175,13 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Welcome to your Jupyter Book
+                    Data Mining Projects - Deutsche Bahn
                 </a>
             </li>
         </ul>
         <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Description.html">Project Justification</a></li>
+
 <li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
 </ul>
@@ -368,7 +369,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>Libraries and Config</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -377,7 +378,16 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Libraries and Config</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exploratory-data-analysis"><strong>Exploratory Data Analysis</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adjusting-datetime-columns-to-correct-format"><strong>Adjusting datetime columns to correct format</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-cleaning"><strong>Data cleaning</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#train-delay-visualization-and-analysis"><strong>Train Delay Visualization and Analysis</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-aggregation-for-temporal-analysis"><strong>Data aggregation for temporal analysis</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#temporal-analysis-of-delays"><strong>Temporal Analysis of delays</strong></a></li>
+</ul>
+</li>
 </ul>
 
             </nav>
@@ -390,7 +400,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <div class="cell docutils container">
+  <section class="tex2jax_ignore mathjax_ignore" id="libraries-and-config">
+<h1><strong>Libraries and Config</strong><a class="headerlink" href="#libraries-and-config" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -439,6 +451,9 @@ document.write(`
 </div>
 </div>
 </div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="exploratory-data-analysis">
+<h1><strong>Exploratory Data Analysis</strong><a class="headerlink" href="#exploratory-data-analysis" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -477,6 +492,8 @@ memory usage: 314.5+ MB
 </div>
 </div>
 </div>
+<section id="adjusting-datetime-columns-to-correct-format">
+<h2><strong>Adjusting datetime columns to correct format</strong><a class="headerlink" href="#adjusting-datetime-columns-to-correct-format" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># correct data types from columns</span>
@@ -1009,6 +1026,9 @@ memory usage: 377.4+ MB
 </div>
 </div>
 <p>The following diagram depicts that most of the feedback for delays, besides “Information” which does not provide directly answer, is Bauarbeiten which in English translates as “construction work”.</p>
+</section>
+<section id="data-cleaning">
+<h2><strong>Data cleaning</strong><a class="headerlink" href="#data-cleaning" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="c1"># check for duplicates</span>
@@ -1564,6 +1584,9 @@ memory usage: 377.4+ MB
   </div>
 </div></div>
 </div>
+</section>
+<section id="train-delay-visualization-and-analysis">
+<h2><strong>Train Delay Visualization and Analysis</strong><a class="headerlink" href="#train-delay-visualization-and-analysis" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
@@ -1970,6 +1993,9 @@ if (outputEl) {{
 </html></div></div>
 </div>
 <p>Overview of stations analyzed in Germany.</p>
+</section>
+<section id="data-aggregation-for-temporal-analysis">
+<h2><strong>Data aggregation for temporal analysis</strong><a class="headerlink" href="#data-aggregation-for-temporal-analysis" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_arrival</span> <span class="o">=</span> <span class="n">df_clean</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -2892,6 +2918,9 @@ if (outputEl) {{
   </div>
 </div></div>
 </div>
+</section>
+<section id="temporal-analysis-of-delays">
+<h2><strong>Temporal Analysis of delays</strong><a class="headerlink" href="#temporal-analysis-of-delays" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
@@ -2927,21 +2956,18 @@ Overall, the delays remain under 5 minutes for the majority of the days, althoug
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 
-<span class="c1"># First plot: arrival and departure delays over datetime</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">df_final_hour</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;departure_plan_datetime&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;delay_percentage&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;delays/departure%&quot;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;firebrick&quot;</span><span class="p">)</span>
 <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;delays/departure%&quot;</span><span class="p">)</span>
 <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
 <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Delay Type&quot;</span><span class="p">)</span>
 
-<span class="c1"># Second plot: arrival and departure delays over time of day</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">df_final_hour</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;departure_plan_hour&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;delay_percentage&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;delays/departure%&quot;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;firebrick&quot;</span><span class="p">)</span>
 <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">)</span>
 <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;delays/departure%&quot;</span><span class="p">)</span>
 <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
 <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Delay Type&quot;</span><span class="p">)</span>
 
-<span class="c1"># Adjust layout to prevent overlap</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -2954,7 +2980,6 @@ Overall, the delays remain under 5 minutes for the majority of the days, althoug
 <p>Based on the first chart there are significant spikes on 2024-07-11 and 2024-07-12, where the percentage of delayed departures reaches around 25% at its peak. This could indicate a specific disruption or operational issue on those dates, the percentage of delays fluctuates between 5% and 20% throughout the rest of the week, with no significant downward trends, indicating consistent delays over time.</p>
 <p>Moreover, the spike on 2024-07-11 stands out, representing a sharp increase in delays, followed by a quick recovery.</p>
 <p>The second plot shows the percentage of delayed departures across different hours of the day (from 0 to 24 hours), it is visible that the percentage of delays is highest during the early morning (0-2 hours), reaching around 20%, and dips to its lowest around 5-6 hours. From noon onwards (around hour 12), delays gradually increase again, peaking at around hour 15-18, before tapering off slightly toward the late evening.</p>
-<p>The shaded area around the line indicates the variability or uncertainty in the delay percentages. Early morning and late afternoon hours seem to exhibit the highest variability, suggesting that delays during these times can fluctuate more dramatically than during midday periods.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_dep_mean_cat</span> <span class="o">=</span> <span class="n">df_departure</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;departure_plan_datetime&quot;</span><span class="p">,</span> <span class="s2">&quot;category&quot;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">departure_delay_m</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -2988,6 +3013,10 @@ Overall, the delays remain under 5 minutes for the majority of the days, althoug
 <img alt="_images/ef5468ec01eba7799bd4cb3e02996f35064d231f3883d3104836e70cb38ddbad.png" src="_images/ef5468ec01eba7799bd4cb3e02996f35064d231f3883d3104836e70cb38ddbad.png" />
 </div>
 </div>
+<p>Across the date range, category 1 and 2 stations tend to have slightly higher delays, particularly noticeable during peaks. A clear spike is visible on 2024-07-11, where all categories experience a sharp increase in delays, suggesting a systemic disruption on that day.</p>
+<p>Although station categories 1 and 2 (larger or more important stations) tend to experience higher delays, the overall trend is similar across categories. The delay spikes are synchronized, implying that disruptions affect the entire system, regardless of station size, however, smaller stations (categories 4 and 5) generally have slightly lower delays, but the difference is not extreme.</p>
+<p>Finally, the second plot shows that all categories experience the highest delays at the start of the day (around hour 0), with category 1 stations (largest, most important stations) showing the highest delays, nearly reaching an average of 3 minutes.</p>
+<p>There is a notable dip in delays around hour 5, after which delays steadily increase again. Delays peak in the late afternoon (around hour 15-18) before tapering off later in the evening. Category 5 stations tend to have the lowest delays across most time periods, suggesting that smaller or less critical stations may experience fewer operational disruptions.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">state_list</span> <span class="o">=</span> <span class="n">df_clean</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
@@ -3036,6 +3065,8 @@ Overall, the delays remain under 5 minutes for the majority of the days, althoug
 <img alt="_images/c251437b3407200f31ed16f35d688749e6a19c25ba3c266240f8a2273746306b.png" src="_images/c251437b3407200f31ed16f35d688749e6a19c25ba3c266240f8a2273746306b.png" />
 </div>
 </div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -3082,7 +3113,16 @@ Overall, the delays remain under 5 minutes for the majority of the days, althoug
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Libraries and Config</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exploratory-data-analysis"><strong>Exploratory Data Analysis</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adjusting-datetime-columns-to-correct-format"><strong>Adjusting datetime columns to correct format</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-cleaning"><strong>Data cleaning</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#train-delay-visualization-and-analysis"><strong>Train Delay Visualization and Analysis</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-aggregation-for-temporal-analysis"><strong>Data aggregation for temporal analysis</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#temporal-analysis-of-delays"><strong>Temporal Analysis of delays</strong></a></li>
+</ul>
+</li>
 </ul>
 
   </nav></div>
